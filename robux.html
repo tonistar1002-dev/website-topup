@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top up Robux</title>
+    <link rel="stylesheet" href="robux.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Top Up Robux</h1>
+      <div class="promo-marquee">
+        <marquee behavior="scroll" direction="left">
+          Info:promo ramadhan,Yuk Order Robux Sekarang Dan Dapatkan banyak
+          promo-promo robux ramdhan lainnya
+        </marquee>
+      </div>
+    </header>
+
+    <section id="harga">
+      <h2></h2>
+
+      <p>
+        Top Up Robux Ter-Aman Dan Murah,Robux 100% Legal(aman buat akun kalian)
+      </p>
+    </section>
+
+    <section id="keranjang">
+      <h2>Keranjang Belanja</h2>
+      <form id="order-form">
+        <label for="menu">Pilih Menu:</label>
+        <select id="menu">
+          <option value="580 + 20 Bonus = 600 Robux">
+            580 + 20 Bonus = 600 Robux (Rp 52.000)
+          </option>
+          <option value="750 + 50 Bonus = 800 Robux">
+            750 + 50 Bonus = 800 Robux (Rp 71.000)
+          </option>
+          <option value="1000 + 80 Bonus = 1080 Robux">
+            1000 + 80 Bonus = 1080 Robux (Rp 92.000)
+          </option>
+          <option value="1300 + 100 Bonus = 1400 Robux">
+            1300 + 100 Bonus = 1400 Robux (Rp 130.000)
+          </option>
+          <option value="1480 + 120 Bonus = 1600 Robux">
+            1480 + 120 Bonus = 1600 Robux (Rp 147.000)
+          </option>
+          <option value="1600 + 200 Bonus = 1800 Robux">
+            1600 + 200 Bonus = 1800 Robux (Rp 168.000)
+          </option>
+          <option value="2000 + 250 Bonus = 2250 Robux">
+            2000 + 250 Bonus = 2250 Robux (Rp 211.000)
+          </option>
+          <option value="3200 + 220 Bonus = 3420 Robux">
+            3200 + 220 Bonus = 3420 Robux (Rp 322.000)
+          </option>
+          <option value="4500 = 500 Bonus = 5000 Robux">
+            4500 = 500 Bonus = 5000 Robux (Rp 460.000)
+          </option>
+        </select>
+        <label for="quantity">Jumlah:</label>
+        <input type="number" id="quantity" min="1" value="1" />
+        <button type="button" id="add-to-cart">Tambah ke Keranjang</button>
+      </form>
+      <div id="cart-items">
+        <h3>Keranjang Anda:</h3>
+        <ul id="cart-list"></ul>
+        <p>Total: Rp <span id="total-price">0</span></p>
+      </div>
+    </section>
+
+    <section id="pembayaran">
+      <h2>Metode Pembayaran</h2>
+      <div class="payment-options">
+        <label>
+          <input type="radio" name="payment" value="QRIS" />
+
+          QRIS (Scan QR Code)
+        </label>
+        <label>
+          <input type="radio" name="payment" value="E-Wallet" />
+
+          E-Wallet (GoPay, OVO, dll.)
+        </label>
+      </div>
+      <div id="bukti-pembayaran" style="display: none">
+        <label for="bukti-file">Upload Bukti Pembayaran:</label>
+        <input type="file" id="bukti-file" accept="image/*" />
+        <p>
+          Upload gambar bukti pembayaran. Bukti akan dikirim terpisah via
+          WhatsApp setelah pesan.
+        </p>
+      </div>
+    </section>
+
+    <section id="lokasi">
+      <h2>Detail Pengiriman Robux</h2>
+      <form id="location-form">
+        <label for="nama">Nama Pembeli:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" />
+        <label for="whatsapp">Nomor WhatsApp Pembeli:</label>
+        <input type="tel" id="whatsapp" placeholder="Contoh: 081234567890" />
+        <label for="email">Gmail Pembeli:</label>
+        <input type="email" id="email" placeholder="Contoh: nama@gmail.com" />
+        <label for="alamat">Link Game pass</label>
+        <textarea
+          id="alamat"
+          rows="4"
+          placeholder="Masukkan Link Game Pass Disini
+          "
+        ></textarea>
+        <label for="catatan">Catatan Tambahan:</label>
+        <textarea
+          id="catatan"
+          rows="2"
+          placeholder="Contoh: Tolong Kirim Robux  Secepatnya, atau instruksi khusus"
+        ></textarea>
+      </form>
+    </section>
+
+    <section id="pesan">
+      <button id="order-button">Pesan Sekarang</button>
+    </section>
+
+    <section id="testimoni">
+      <h2>Testimoni Pembeli</h2>
+      <form id="testimoni-form">
+        <label for="rating">Rating (1-5 Bintang):</label>
+        <select id="rating">
+          <option value="1">1 Bintang</option>
+          <option value="2">2 Bintang</option>
+          <option value="3">3 Bintang</option>
+          <option value="4">4 Bintang</option>
+          <option value="5">5 Bintang</option>
+        </select>
+        <label for="ulasan">Ulasan:</label>
+        <textarea
+          id="ulasan"
+          rows="4"
+          placeholder="Berikan ulasan Anda tentang jasa pengiriman ini"
+        ></textarea>
+        <button type="submit">Kirim Testimoni</button>
+      </form>
+      <div id="testimoni-list">
+        <h3>Ulasan Pembeli:</h3>
+        <!-- Ulasan akan ditampilkan di sini -->
+      </div>
+    </section>
+
+    <script src="robux.js"></script>
+  </body>
+</html>
